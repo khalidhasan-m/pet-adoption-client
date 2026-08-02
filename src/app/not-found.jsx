@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { Button } from "@heroui/react";
+import { Button } from "@/components/ui/Button";
 import { FaPaw } from "react-icons/fa";
 import { FiHome, FiSearch } from "react-icons/fi";
 
@@ -15,11 +14,11 @@ export default function NotFoundPage() {
       <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}
         className="relative z-10 max-w-lg w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-10 shadow-2xl shadow-slate-900/10">
 
-        <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-violet-600 to-pink-500 flex items-center justify-center mx-auto mb-6 shadow-xl shadow-violet-500/30">
+        <div className="w-20 h-20 rounded-3xl bg-linear-to-tr from-violet-600 to-pink-500 flex items-center justify-center mx-auto mb-6 shadow-xl shadow-violet-500/30">
           <FaPaw className="text-4xl text-white animate-bounce" />
         </div>
 
-        <h1 className="text-7xl font-black bg-gradient-to-r from-violet-600 to-pink-500 bg-clip-text text-transparent mb-4">
+        <h1 className="text-7xl font-black bg-linear-to-r from-violet-600 to-pink-500 bg-clip-text text-transparent mb-4">
           404
         </h1>
 
@@ -28,19 +27,15 @@ export default function NotFoundPage() {
         </h2>
 
         <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-8 max-w-sm mx-auto">
-          The page you are looking for doesn't exist or has been moved. Even our best tracking dogs couldn't sniff it out!
+          The page you are looking for doesn&apos;t exist or has been moved. Even our best tracking dogs couldn&apos;t sniff it out!
         </p>
 
         <div className="flex flex-wrap justify-center gap-4">
-          <Button as={Link} href="/" radius="lg" size="lg"
-            className="bg-gradient-to-r from-violet-600 to-pink-500 text-white font-bold shadow-lg shadow-violet-500/25 hover:shadow-violet-500/40"
-            startContent={<FiHome />}>
+          <Button href="/" variant="primary" size="lg" startContent={<FiHome />}>
             Back to Home
           </Button>
 
-          <Button as={Link} href="/pets" variant="bordered" radius="lg" size="lg"
-            className="border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 font-semibold"
-            startContent={<FiSearch />}>
+          <Button href="/pets" variant="outline" size="lg" startContent={<FiSearch />}>
             Browse Pets
           </Button>
         </div>
@@ -48,3 +43,4 @@ export default function NotFoundPage() {
     </div>
   );
 }
+
