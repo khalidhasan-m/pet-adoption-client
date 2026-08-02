@@ -6,7 +6,8 @@ A modern, responsive full-stack Pet Adoption Platform built with **Next.js 15 (A
 
 ## 🔗 Live Site & Repositories
 
-- **Live Frontend**: Deployed on Vercel / Render
+- **Live Frontend**: [https://pet-adoption-client-gamma.vercel.app/](https://pet-adoption-client-gamma.vercel.app/)
+- **Live Backend API**: [https://pet-adoption-server-gxpn.onrender.com](https://pet-adoption-server-gxpn.onrender.com)
 - **Client Repo**: [GitHub - pet-adoption-client](https://github.com/khalidhasan-m/pet-adoption-client)
 - **Server Repo**: [GitHub - pet-adoption-server](https://github.com/khalidhasan-m/pet-adoption-server)
 
