@@ -9,28 +9,23 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t" style={{ background: "var(--bg-secondary)", borderColor: "var(--border)" }}>
-      <div className="container py-16">
+    <footer className="bg-slate-50 dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800 transition-colors">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
-          <div>
-            <Link href="/" className="flex items-center gap-2 no-underline mb-4">
-              <div className="p-2 rounded-xl" style={{ background: "var(--accent-gradient)" }}>
-                <FaPaw className="text-white text-lg" />
+          <div className="space-y-4">
+            <Link href="/" className="flex items-center gap-2.5 no-underline">
+              <div className="p-2.5 rounded-2xl bg-gradient-to-tr from-purple-600 via-purple-500 to-pink-500 text-white shadow-md shadow-purple-500/20">
+                <FaPaw className="text-lg" />
               </div>
-              <span className="text-lg font-bold" style={{
-                fontFamily: "var(--font-heading)",
-                background: "var(--accent-gradient)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}>
+              <span className="text-xl font-extrabold bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 bg-clip-text text-transparent tracking-tight">
                 PawfectMatch
               </span>
             </Link>
-            <p className="text-sm leading-relaxed mb-5" style={{ color: "var(--text-secondary)" }}>
+            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
               Connecting loving families with adorable pets. Every pet deserves a forever home, and we are here to make that happen.
             </p>
-            <div className="flex gap-3">
+            <div className="flex items-center gap-3 pt-2">
               {[
                 { icon: <FaFacebook />, href: "#" },
                 { icon: <FaTwitter />, href: "#" },
@@ -40,19 +35,7 @@ export default function Footer() {
                 <a
                   key={i}
                   href={social.href}
-                  className="w-9 h-9 rounded-lg flex items-center justify-center transition-all text-sm"
-                  style={{
-                    background: "var(--bg-tertiary)",
-                    color: "var(--text-secondary)",
-                  }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.background = "var(--accent)";
-                    e.currentTarget.style.color = "#fff";
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.background = "var(--bg-tertiary)";
-                    e.currentTarget.style.color = "var(--text-secondary)";
-                  }}
+                  className="w-10 h-10 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-purple-600 hover:text-white dark:hover:bg-purple-600 dark:hover:text-white transition-all flex items-center justify-center text-sm shadow-sm"
                 >
                   {social.icon}
                 </a>
@@ -62,10 +45,10 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4" style={{ color: "var(--text-primary)", fontFamily: "var(--font-heading)" }}>
+            <h4 className="font-bold text-slate-900 dark:text-slate-100 text-base mb-4 tracking-tight">
               Quick Links
             </h4>
-            <div className="flex flex-col gap-2.5">
+            <div className="flex flex-col space-y-2.5">
               {[
                 { label: "Home", href: "/" },
                 { label: "All Pets", href: "/pets" },
@@ -75,10 +58,7 @@ export default function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm no-underline transition-colors"
-                  style={{ color: "var(--text-secondary)" }}
-                  onMouseEnter={e => e.currentTarget.style.color = "var(--accent)"}
-                  onMouseLeave={e => e.currentTarget.style.color = "var(--text-secondary)"}
+                  className="text-sm text-slate-600 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors no-underline font-medium"
                 >
                   {link.label}
                 </Link>
@@ -88,15 +68,14 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="font-semibold mb-4" style={{ color: "var(--text-primary)", fontFamily: "var(--font-heading)" }}>
+            <h4 className="font-bold text-slate-900 dark:text-slate-100 text-base mb-4 tracking-tight">
               Resources
             </h4>
-            <div className="flex flex-col gap-2.5">
+            <div className="flex flex-col space-y-2.5">
               {["Pet Care Guide", "Adoption Process", "Volunteer", "Donate", "FAQ"].map((item) => (
-                <span key={item} className="text-sm cursor-pointer transition-colors"
-                  style={{ color: "var(--text-secondary)" }}
-                  onMouseEnter={e => e.currentTarget.style.color = "var(--accent)"}
-                  onMouseLeave={e => e.currentTarget.style.color = "var(--text-secondary)"}
+                <span
+                  key={item}
+                  className="text-sm text-slate-600 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors cursor-pointer font-medium"
                 >
                   {item}
                 </span>
@@ -106,23 +85,21 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-4" style={{ color: "var(--text-primary)", fontFamily: "var(--font-heading)" }}>
+            <h4 className="font-bold text-slate-900 dark:text-slate-100 text-base mb-4 tracking-tight">
               Contact Us
             </h4>
-            <div className="flex flex-col gap-3">
-              <div className="flex items-start gap-3">
-                <FiMapPin size={16} className="mt-0.5 flex-shrink-0" style={{ color: "var(--accent)" }} />
-                <span className="text-sm" style={{ color: "var(--text-secondary)" }}>
-                  123 Pet Avenue, Dhaka 1200, Bangladesh
-                </span>
+            <div className="space-y-3">
+              <div className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+                <FiMapPin size={16} className="mt-1 text-purple-600 flex-shrink-0" />
+                <span>123 Pet Avenue, Dhaka 1200, Bangladesh</span>
               </div>
-              <div className="flex items-center gap-3">
-                <FiPhone size={16} className="flex-shrink-0" style={{ color: "var(--accent)" }} />
-                <span className="text-sm" style={{ color: "var(--text-secondary)" }}>+880 1234-567890</span>
+              <div className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400">
+                <FiPhone size={16} className="text-purple-600 flex-shrink-0" />
+                <span>+880 1234-567890</span>
               </div>
-              <div className="flex items-center gap-3">
-                <FiMail size={16} className="flex-shrink-0" style={{ color: "var(--accent)" }} />
-                <span className="text-sm" style={{ color: "var(--text-secondary)" }}>hello@pawfectmatch.com</span>
+              <div className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400">
+                <FiMail size={16} className="text-purple-600 flex-shrink-0" />
+                <span>hello@pawfectmatch.com</span>
               </div>
             </div>
           </div>
@@ -130,9 +107,9 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="border-t py-5" style={{ borderColor: "var(--border)" }}>
-        <div className="container text-center">
-          <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+      <div className="border-t border-slate-200/80 dark:border-slate-800 py-6">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">
             &copy; {currentYear} PawfectMatch. All rights reserved. Made with ❤️ for pets.
           </p>
         </div>
