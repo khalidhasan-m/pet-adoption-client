@@ -22,6 +22,12 @@
 
 # misc
 .DS_Store
+._*
+
+# ai config
+AGENTS.md
+CLAUDE.md
+.agents/
 *.pem
 
 # debug

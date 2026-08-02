@@ -7,8 +7,8 @@ A modern, responsive full-stack Pet Adoption Platform built with **Next.js 15 (A
 ## 🔗 Live Site & Repositories
 
 - **Live Frontend**: Deployed on Vercel / Render
-- **Client Repo**: [GitHub - pet-adoption-client](https://github.com/)
-- **Server Repo**: [GitHub - pet-adoption-server](https://github.com/)
+- **Client Repo**: [GitHub - pet-adoption-client](https://github.com/khalidhasan-m/pet-adoption-client)
+- **Server Repo**: [GitHub - pet-adoption-server](https://github.com/khalidhasan-m/pet-adoption-server)
 
 ---
 
@@ -47,7 +47,7 @@ PawfectMatch simplifies pet adoption by offering a clean, user-friendly interfac
 
 ```bash
 # Clone repository
-git clone https://github.com/your-username/pet-adoption-client.git
+git clone https://github.com/khalidhasan-m/pet-adoption-client.git
 cd pet-adoption-client
 
 # Install dependencies
